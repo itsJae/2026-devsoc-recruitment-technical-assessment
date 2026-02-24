@@ -1,0 +1,9 @@
+I have completed front-end task only.
+Please go to frontend/freerooms_task
+
+There should be index.html
+If there is any issues, 
+please send me an email via z5725427@ad.unsw.edu.au
+
+I am looking forward to contributing to devsoc as subcommittee.
+Thank you!
