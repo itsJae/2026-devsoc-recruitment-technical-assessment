@@ -1,0 +1,143 @@
+<!-- 
+This program is written by Woojae Lim for the DevSoc 2026 Recruitment Technical Assessment. 
+This program is built using HTML, CSS, and JavaScript.
+
+Start date: Feb-23-2026
+End date: Submission Date 
+
+github repository: https://github.com/itsJae/2026-devsoc-recruitment-technical-assessment
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Freerooms</title>
+    <link rel="icon" href="../assets/freeRoomsLogo.png" type="image/x-icon" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div>
+      <header>
+        <!-- logo wrapper -->
+        <a id="logo-wrapper" href="#">
+          <!-- logo image -->
+          <div>
+            <img
+              id="logo-img"
+              src="../assets/freeRoomsLogo.png"
+              alt="Freeroom_logo"
+            />
+          </div>
+          <!-- logo name -->
+          <h1>Freerooms</h1>
+        </a>
+        <!-- wrapper for icons in header section-->
+        <div id="header-icons-wrapper">
+          <ul>
+            <li class="header-icons">
+              <a
+                ><img
+                  src="../icons/search.png"
+                  class="colored-icons"
+                  alt="search-icon"
+              /></a>
+            </li>
+            <li class="header-icons">
+              <a
+                ><img
+                  src="../icons/grid_view.png"
+                  class="colored-icons"
+                  alt="search-icon"
+              /></a>
+            </li>
+            <li class="header-icons">
+              <a
+                ><img
+                  src="../icons/map.png"
+                  class="colored-icons"
+                  alt="search-icon"
+              /></a>
+            </li>
+            <li class="header-icons">
+              <a
+                ><img
+                  src="../icons/dark_mode.png"
+                  class="colored-icons"
+                  alt="search-icon"
+              /></a>
+            </li>
+          </ul>
+        </div>
+      </header>
+    </div>
+    <!-- Wrapper for navigation section -->
+    <!-- Navigation section includes Filters & Sort button, and Search Bar  -->
+    <div id="nav-main-wrapper">
+      <div id="nav-wrapper">
+        <nav>
+          <!-- Filters dropdown section -->
+          <div class="dropdown-wrap dropdown-box">
+            <div id="filters-icon">
+              <img src="../icons/filter_alt.png" class="colored-icons" />
+            </div>
+            <details>
+              <summary>Filters</summary>
+              <ul>
+                <li><a href="#">Room Type</a></li>
+                <li><a href="#">Room Capacity</a></li>
+                <li><a href="#">Duration Free</a></li>
+                <li><a href="#">Location</a></li>
+                <li><a href="#">ID Required</a></li>
+              </ul>
+            </details>
+          </div>
+
+          <!-- Search bar -->
+          <div id="search-bar">
+            <div id="search-bar-wrap">
+              <div>
+                <img
+                  src="../icons/search.png"
+                  class="colored-icons"
+                  alt="search_icon"
+                />
+              </div>
+              <input placeholder="Search for a building..." text="text" />
+            </div>
+          </div>
+          <!-- Sort dropdown section -->
+          <div class="dropdown-wrap dropdown-box">
+            <div>
+              <img
+                src="../icons/filter_list.png"
+                class="colored-icons"
+                alt="sort_icon"
+              />
+            </div>
+            <details>
+              <summary>Sort</summary>
+              <ul>
+                <li><a href="#">Most Available Rooms</a></li>
+                <li><a href="#">Nearest</a></li>
+                <li><a href="#">Alphabetical</a></li>
+                <li><a href="#">Reverse Alphabetical</a></li>
+                <li><a href="#">Lower Campus</a></li>
+                <li><a href="#">Upper Campus</a></li>
+              </ul>
+            </details>
+          </div>
+        </nav>
+      </div>
+
+      <!-- Main Section where buildings are displayed -->
+      <main>
+        <div id="main-wrap">
+          <!-- Building cards will be generated here by JavaScript -->
+      </main>
+    </div>
+    <script src="./JS/door.js" defer></script>
+    <script src="./JS/card.js"></script>
+  </body>
+</html>

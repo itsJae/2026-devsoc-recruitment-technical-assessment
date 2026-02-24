@@ -1,0 +1,292 @@
+/* BASIC SETTINGS */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-weight: 700;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+summary {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+  height: auto;
+}
+
+body {
+  font-family: "Pretendard", sans-serif;
+  line-height: 1.6;
+  color: #333;
+}
+
+header {
+  width: 100%;
+  border-bottom: 1px solid #ddd;
+  background: #fff;
+}
+
+section {
+  margin-bottom: 40px;
+}
+
+/* Header Logo Section */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 24px;
+}
+
+#logo-wrapper {
+  display: flex;
+}
+
+#logo-wrapper h1 {
+  color: #ef6c00;
+}
+
+#logo-wrapper:hover {
+  opacity: 0.7;
+}
+
+#logo-img {
+  width: 50px;
+  aspect-ratio: 1 / 1;
+}
+
+/* Header Icon Section */
+#header-icons-wrapper ul {
+  display: flex;
+  gap: 10px;
+}
+
+#header-icons-wrapper li {
+  width: 42px;
+  aspect-ratio: 1 / 1;
+  border: 1px solid #ef6c00;
+  border-radius: 20%;
+  opacity: 0.8;
+  transition: opacity 0.3s ease;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.colored-icons {
+  filter: invert(44%) sepia(91%) saturate(2258%) hue-rotate(10deg)
+    brightness(101%) contrast(101%);
+}
+
+#header-icons-wrapper li:hover {
+  opacity: 1;
+  background-color: #fff5e6;
+}
+
+/* Navigation Section */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 0px;
+}
+
+#nav-main-wrapper {
+  display: flex;
+  padding: 0 24px;
+  flex-direction: column;
+}
+
+/* Filters and Sort Button Section */
+.dropdown-box {
+  padding: 5px 20px;
+  color: #ef6c00;
+  border-radius: 10px;
+  border: 2px solid #ef6c00;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.dropdown-box:hover {
+  opacity: 1;
+  background-color: #fff5e6;
+}
+
+.dropdown-wrap {
+  display: flex;
+  gap: 20px;
+}
+
+/* Search Bar Section */
+#search-bar {
+  display: flex;
+}
+
+#search-bar-wrap {
+  display: flex;
+  align-items: center;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  outline: none;
+  box-sizing: border-box;
+  transition: border-color 0.3s ease;
+  flex-grow: 1;
+  width: 100%;
+  height: 100%;
+  padding: 7px 20px;
+}
+
+#search-bar-wrap input {
+  flex: 1;
+  height: 100%;
+  border: none;
+  font-size: 16px;
+  padding: 0 15px;
+  background: transparent;
+  outline: none;
+}
+
+#search-bar-wrap:focus-within {
+  border: 1px solid #ef6c00;
+}
+
+#search-bar-wrap:hover {
+  border: 1px solid #ef6c00;
+  cursor: text;
+}
+
+/* Main Section where each card for each building is displayed */
+#main-wrap {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 20px;
+  width: 100%;
+}
+
+#main-wrap {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 20px;
+}
+
+/* Media query for responsive web */
+@media (min-width: 480px) {
+  #main-wrap {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .card-wrap {
+    height: 300px;
+  }
+}
+
+@media (min-width: 768px) {
+  #main-wrap {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .card-wrap {
+    height: 300px;
+  }
+}
+
+@media (min-width: 1024px) {
+  #main-wrap {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .card-wrap {
+    height: 350px;
+  }
+}
+
+@media (min-width: 1400px) {
+  #main-wrap {
+    grid-template-columns: repeat(5, 1fr);
+  }
+  .card-wrap {
+    height: 385px;
+  }
+}
+
+/* Stylings for Each Card */
+.card-wrap {
+  width: 100%;
+  position: relative;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.card-wrap:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+.card-wrap > img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+/* Stylings for Available Rooms Display */
+.available-rooms-wrap {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 10px 15px;
+  z-index: 10;
+  position: absolute;
+  margin: 10px;
+  /* width: 200px; */
+  top: 0px;
+  right: 0px;
+}
+
+.green-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: #2ecc71;
+  display: inline-block;
+}
+
+/* Stylings for Card Buttons 
+where building name and View Details buttons is in. */
+.card-button-wrap {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border-radius: 30px;
+  background-color: #e8bb95;
+  padding: 5px 15px;
+  border: none;
+  cursor: pointer;
+}
+
+.building-content-wrap {
+  background-color: #ef6c00;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 10;
+  position: absolute;
+  padding: 15px 20px;
+  bottom: 10px;
+  left: 10px;
+  right: 10px;
+}
