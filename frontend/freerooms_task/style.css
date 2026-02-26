@@ -16,10 +16,6 @@ a {
   color: inherit;
 }
 
-summary {
-  list-style: none;
-}
-
 img {
   max-width: 100%;
   display: block;
@@ -36,10 +32,6 @@ header {
   width: 100%;
   border-bottom: 1px solid #ddd;
   background: #fff;
-}
-
-section {
-  margin-bottom: 40px;
 }
 
 /* Header Logo Section */
